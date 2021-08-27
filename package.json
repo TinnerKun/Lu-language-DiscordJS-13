@@ -1,0 +1,25 @@
+{
+  "name": "lu-language-discordjs-12",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node .",
+    "dev": "nodemon ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TinnerKung/Lu-language-DiscordJS-12.git"
+  },
+  "author": "TinnerKung",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/TinnerKung/Lu-language-DiscordJS-12/issues"
+  },
+  "homepage": "https://github.com/TinnerKung/Lu-language-DiscordJS-12#readme",
+  "dependencies": {
+    "discord.js": "12.5.3",
+    "puppeteer": "^10.2.0"
+  }
+}
