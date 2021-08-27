@@ -10,14 +10,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/TinnerKung/Lu-language-DiscordJS-12.git"
+    "url": "git+https://github.com/TinnerKung/Lu-language-DiscordJS-13.git"
   },
   "author": "TinnerKung & OpecZ CH",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/TinnerKung/Lu-language-DiscordJS-12/issues"
+    "url": "https://github.com/TinnerKung/Lu-language-DiscordJS-13/issues"
   },
-  "homepage": "https://github.com/TinnerKung/Lu-language-DiscordJS-12#readme",
+  "homepage": "https://github.com/TinnerKung/Lu-language-DiscordJS-13#readme",
   "dependencies": {
     "discord.js": "13.0.0-dev.t1628035429.00d5cee",
     "puppeteer": "^10.2.0"
