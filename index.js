@@ -3,7 +3,7 @@ const puppeteer = require('puppeteer');
 const client = new Client();
 
 const config = {
-  token: "ํYour Token Here",
+  token: "",
   prefix: "/",
   api_url: "http://lootranslator.infinityfreeapp.com/lootranslator.php"
 }
@@ -17,9 +17,13 @@ client.on('message', async (msg) => {
     const cmd = args.shift().toLowerCase();
 
     if (cmd == `${config.prefix}loo`) {
+        
+        let argall = args.join(" ");
+        let check  = argall.split(/[A-Z,a-z,0-9]/).join("");
+
       const browser = await puppeteer.launch();
       const page = await browser.newPage();
-      await page.goto(`${config.api_url}?text=${args[0]}&mode=thai2loo&i=1`);
+      await page.goto(`${config.api_url}?text=${check}&mode=thai2loo&i=1`);
       const res = await page.$eval('body > div', r => r.innerText);
       const embed = new MessageEmbed()
         .setTitle('Loo Translator')
