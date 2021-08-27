@@ -22,8 +22,8 @@ const client = new Discord.Client({
 });
 const cooldown = new Set();
 const config = {
-    token: "ODM2MDMyNjI0NjE4NzY2Mzc2.YIYGDg.vPQw-0jCvdzkcYylSTS6wBi9mcA",
-    prefix: "$",
+    token: "TOKEN",
+    prefix: "/",
     api_url: "http://lootranslator.infinityfreeapp.com/lootranslator.php"
 }
 client.on('ready', () => {
