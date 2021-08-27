@@ -1,5 +1,5 @@
 {
-  "name": "lu-language-discordjs-12",
+  "name": "lu-language-discordjs-13",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -12,14 +12,14 @@
     "type": "git",
     "url": "git+https://github.com/TinnerKung/Lu-language-DiscordJS-12.git"
   },
-  "author": "TinnerKung",
+  "author": "TinnerKung & OpecZ CH",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/TinnerKung/Lu-language-DiscordJS-12/issues"
   },
   "homepage": "https://github.com/TinnerKung/Lu-language-DiscordJS-12#readme",
   "dependencies": {
-    "discord.js": "12.5.3",
+    "discord.js": "13.0.0-dev.t1628035429.00d5cee",
     "puppeteer": "^10.2.0"
   }
 }
