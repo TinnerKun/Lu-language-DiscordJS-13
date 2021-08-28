@@ -12,14 +12,14 @@
     "type": "git",
     "url": "git+https://github.com/TinnerKung/Lu-language-DiscordJS-13.git"
   },
-  "author": "TinnerKung & OpecZ CH",
+  "author": ["TinnerKung", OpecZ CH"],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/TinnerKung/Lu-language-DiscordJS-13/issues"
   },
   "homepage": "https://github.com/TinnerKung/Lu-language-DiscordJS-13#readme",
   "dependencies": {
-    "discord.js": "13.0.0-dev.t1628035429.00d5cee",
+    "discord.js": "13.0.0-dev.t1628035429.00d5cee", // บังคับเวอร์ชั้นนี้เท่านั้น รองรับ NodeJS 14^
     "puppeteer": "^10.2.0"
   }
 }
