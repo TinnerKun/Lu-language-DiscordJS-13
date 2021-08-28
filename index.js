@@ -33,9 +33,9 @@ client.on('messageCreate', async (message) => {
     const args = message.content.trim().split(/ +/g);
     const cmd = args.shift().toLowerCase();
     if (cmd == `${config.prefix}loo`) {
-        console.log(cooldown.has(message.guild.id))
+        //console.log(cooldown.has(message.guild.id))
         if (cooldown.has(message.guild.id)) {
-            message.reply({ embeds: [new MessageEmbed().setAuthor('โปรดลองอีกครั้งใน 5 วินาที').setColor('#ff0000')] }).then(msg => {
+            message.reply({ embeds: [new MessageEmbed().setAuthor('โปรดลองอีกครั้งใน 5 วินาที').setColor('#f3cbd2')] }).then(msg => {
                 setTimeout(() => msg.delete(), 3000);
             });
             return
@@ -59,5 +59,32 @@ client.on('messageCreate', async (message) => {
         message.channel.send({ embeds: [embed] })
         await browser.close()
     }
+    if (cmd == `${config.prefix}tloo`) {
+      //console.log(cooldown.has(message.guild.id))
+      if (cooldown.has(message.guild.id)) {
+          message.reply({ embeds: [new MessageEmbed().setAuthor('โปรดลองอีกครั้งใน 5 วินาที').setColor('#f3cbd2')] }).then(msg => {
+              setTimeout(() => msg.delete(), 3000);
+          });
+          return
+      } else {
+          cooldown.add(message.guild.id);
+          setTimeout(() => {
+              cooldown.delete(message.guild.id);
+          }, 5000);
+      }
+      let argall = args.join(" ");
+      let check = argall.split(/[A-Z,a-z,0-9]/).join("");
+
+      const browser = await puppeteer.launch();
+      const page = await browser.newPage();
+      await page.goto(`${config.api_url}?text=${check}&mode=loo2thai&i=1`);
+      const res = await page.$eval('body > div', r => r.innerText);
+      const embed = new MessageEmbed()
+          .setTitle(res)
+          .setColor('#00ffff')
+          .setFooter('Support By ⵝⵉⵏⵏⴻⵔⴿⵓⵏ');
+      message.channel.send({ embeds: [embed] })
+      await browser.close()
+  }
 });
 client.login(config.token);
