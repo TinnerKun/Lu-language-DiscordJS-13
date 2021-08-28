@@ -19,7 +19,7 @@
   },
   "homepage": "https://github.com/TinnerKung/Lu-language-DiscordJS-13#readme",
   "dependencies": {
-    "discord.js": "discordjs/discord.js",
+    "discord.js": "13.0.0-dev.t1628035429.00d5cee", // บังคับเวอร์ชั้นนี้เท่านั้น รองรับ NodeJS 14^
     "puppeteer": "^10.2.0"
   }
 }
